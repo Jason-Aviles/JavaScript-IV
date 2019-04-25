@@ -15,10 +15,12 @@ class GameObject {
     this.createdAt = attributes.createdAt;
     this.name = attributes.name;
     this.dimensions = attributes.dimensions;
-    GameObject.prototype.destroy = function () {
+  
+    }
+  destroy() {
       return `${name} was removed from the game.`
     }
-    }
+
   }
 
 
@@ -27,9 +29,10 @@ class GameObject {
       constructor(childAttributes ){
           super(childAttributes)
       this.healthPoints = childAttributes.healthPoints;
-      CharacterStats.prototype.takeDamage = function () {
+    }  
+    takeDamage () {
         return `${name} took damage.`
-      }}
+      }
   }
   
  
@@ -40,10 +43,13 @@ class GameObject {
      this.team=grandchild.team;
      this.weapons=grandchild.weapons;
      this.language=grandchild.language;
-     Humanoid.prototype.greet= function () {
+
+   }
+  greet () {
       return `${name}offers a greeting in ${this.language}.`
      }
-   }}
+
+}
 
 
   
